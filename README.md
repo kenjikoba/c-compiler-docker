@@ -16,3 +16,8 @@ $ docker container run --name compiler-container --rm --interactive --tty --moun
 
 これからは、基本的に作業は全部Dockerでやっていこうと思っています。
 
+作業するときは、ターミナルでこのディレクトリ（docker）に移動して、
+```
+$ docker container run --name compiler-container --rm --interactive --tty --mount type=bind,src=$(pwd),dst=/src compiler-docker:docker bash
+```
+のコマンドを叩けばいいはずです。今回`docker compose`を使うほど複雑じゃないと思ったので使ってないです。
